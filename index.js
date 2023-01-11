@@ -1,9 +1,9 @@
 import { PropTypes } from 'prop-types';
 import React, { useEffect, useRef, useState } from 'react';
-import './style.scss';
+import './style.css';
 
 
-const ReactInputSelect = ( props ) => {
+const reactInputSelect = ( props ) => {
     const {
         options,
         isLoading,
@@ -286,10 +286,10 @@ const ReactInputSelect = ( props ) => {
     );
 };
 
-module.exports.ReactInputSelect = ReactInputSelect;
+module.exports.reactInputSelect = reactInputSelect;
 
 // ** Default Props
-ReactInputSelect.defaultProps = {
+reactInputSelect.defaultProps = {
     position: 'right',
     isToolTrip: false,
     isCreatable: false,
@@ -301,7 +301,7 @@ ReactInputSelect.defaultProps = {
 };
 
 // ** PropTypes
-ReactInputSelect.propTypes = {
+reactInputSelect.propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string,
     options: PropTypes.array.isRequired,
