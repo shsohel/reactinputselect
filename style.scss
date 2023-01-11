@@ -1,0 +1,211 @@
+$primary-light: #f1f0fd;
+$primary: #7367f0;
+$white: white;
+$border-color: #d8d6de;
+$color-grey: #ededed;
+$icon: #b9b7b7b8;
+
+.m-dropdown {
+  .m-dropdown-main {
+    // font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 100%;
+
+    text-align: center;
+    position: relative;
+
+    .m-dropdown-input {
+      width: 100%;
+      position: relative;
+
+      input {
+        width: 100%;
+        padding: 0.25rem 2.1rem 0.25rem 0.25rem;
+        //   font-size: 0.875rem;
+        height: 2.142rem;
+        line-height: 1;
+        border-radius: 0.25rem;
+        outline: none !important;
+        border: solid 1px $border-color;
+        background-color: $white !important;
+      }
+      input:disabled {
+        border-color: #ebe9f1;
+        background-color: rgba(236, 236, 242, 0.5) !important;
+      }
+
+      .m-value-input {
+        position: relative;
+      }
+
+      .m-value-clear-icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        color: $border-color;
+        padding: 4.1px;
+        margin: 2px;
+        background-color: $white;
+        z-index: 1;
+      }
+
+      .m-value-clear-icon:hover {
+        cursor: pointer;
+      }
+
+      .m-value-clear-icon svg {
+        color: #d8d6de;
+        display: inline-block;
+        fill: currentColor;
+        line-height: 1;
+        stroke: currentColor;
+        stroke-width: 0;
+      }
+
+      .m-loading {
+        position: absolute;
+        right: 13px;
+        bottom: 0;
+        top: 11px;
+
+        .load-icon {
+          width: 20px;
+          height: 6px;
+
+          span {
+            position: absolute;
+            display: inline-block;
+            background: $icon;
+            width: 5px;
+            height: 5px;
+            border-radius: 100px;
+          }
+
+          span:nth-of-type(1) {
+            left: 0;
+          }
+
+          span:nth-of-type(2) {
+            left: 50%;
+          }
+
+          span:nth-of-type(3) {
+            left: 100%;
+          }
+
+          span {
+            animation-name: loading;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+          }
+
+          span:nth-of-type(2) {
+            animation-delay: 0.2s;
+          }
+
+          span:nth-of-type(3) {
+            animation-delay: 0.4s;
+          }
+
+          /* Keyframes */
+          @keyframes loading {
+            0% {
+              opacity: 1;
+            }
+
+            50% {
+              opacity: 0;
+            }
+
+            100% {
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      .m-focus-input {
+        //   background-color: $primary-light;
+        background-color: $white !important;
+        // background-color: hsl(0, 0%, 100%);
+      }
+
+      input:focus {
+        outline: none !important;
+        border: solid 1px $primary;
+      }
+    }
+  }
+
+  .m-dropdown-menu {
+    padding: 2px;
+    background-color: $white;
+    position: fixed;
+    z-index: 1025;
+    border: solid 1px $border-color;
+    border-radius: 0.25rem;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 150px;
+
+    .m-no-option-label {
+      color: hsl(0, 0%, 60%);
+      font-size: small;
+      font-weight: bold;
+    }
+
+    .m-loading-text {
+      color: hsl(0, 0%, 60%);
+      font-size: small;
+      font-weight: bold;
+    }
+
+    .m-menu-options {
+      text-align: left;
+
+      .m-single-option {
+        // border-bottom: 1px solid grey;
+        padding: 3.5px 9.6px 3.5px 9.6px;
+        // padding-left: 2px;
+        // padding-right: 2px;
+        overflow-wrap: break-word;
+        font-weight: 400;
+      }
+
+      .active {
+        background-color: $primary;
+        color: $white;
+      }
+
+      .active:hover {
+        background-color: $primary-light;
+        color: $primary;
+      }
+
+      .m-single-option:last-child {
+        border: none;
+      }
+
+      .m-single-option:hover {
+        background-color: $primary-light;
+      }
+
+      .new-create-value {
+        margin-top: 2px;
+        padding-left: 2px;
+        padding-right: 2px;
+        background-color: $primary-light;
+      }
+
+      // .new-create-value:hover {
+      //   // background-color: rgba($primary, 0.9);
+
+      //   label {
+      //     color: $white !important;
+      //   }
+      // }
+    }
+  }
+}
