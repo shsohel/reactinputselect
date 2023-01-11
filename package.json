@@ -1,5 +1,5 @@
 {
-  "name": "react-input-select",
+  "name": "react-select-pro",
   "version": "1.0.0",
   "description": "You can copy value from selectable item",
   "main": "index.js",
@@ -25,5 +25,6 @@
     "prop-types": "^15.8.1",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0"
-  }
+  },
+  "devDependencies": {}
 }
